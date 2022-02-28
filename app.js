@@ -10,9 +10,16 @@
 
 // document.getElementById("btn").addEventListener("click",change);
 
-let a = 5;
+const a = 5;
 const b = 2;
-const myName = "JH";
+let myName = "JH";
+
+console.log(a+b);
+console.log(a*b);
+console.log(a/b);
+console.log("Hello "+myName);
+
+myName = "jihyeon";
 
 console.log(a+b);
 console.log(a*b);
