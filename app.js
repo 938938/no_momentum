@@ -25,3 +25,9 @@ console.log(a+b);
 console.log(a*b);
 console.log(a/b);
 console.log("Hello "+myName);
+
+let week = ["mon","tue","wed","thu","fri","sat","sun"];
+console.log(week[4]);
+
+week.push("weekend");
+console.log(week);
