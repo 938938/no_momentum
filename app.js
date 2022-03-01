@@ -31,3 +31,17 @@ console.log(week[4]);
 
 week.push("weekend");
 console.log(week);
+
+const player = {
+  name:"jh",
+  points:1,
+  fat:false,
+};
+
+console.log(player);
+console.log(player.name);
+console.log(player["name"]);
+
+player.points=player.points+2;
+player.gender="female";
+console.log(player);
