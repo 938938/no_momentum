@@ -33,3 +33,12 @@ const powerResult = calculator.power(divideResult, minusResult);
 // const KrAge = calculatorKrAge(age);
 
 // console.log(KrAge);
+
+const btn = document.querySelector("#btn");
+const body = document.querySelector("body");
+
+function changeColor(){
+  body.style.backgroundColor="orange";
+}
+
+btn.addEventListener("click",changeColor);
