@@ -13,13 +13,18 @@ console.log(title.id);
 
 function changeText(){
   title.innerHTML="Say! Yaaah!!!";
+  title.style.color="transparent";
 }
 function moreChange(){
   title.innerHTML="What happen?";
+  title.style.color="black";
 }
 
 title.addEventListener("mouseenter",changeText);
 title.addEventListener("mouseleave",moreChange);
+title.style.color="orange";
+
+console.dir(title);
 
 const test = document.querySelector(".hello h1");
 console.log(test);
