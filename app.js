@@ -9,6 +9,7 @@ function changeColor(){
 btn.addEventListener("click",changeColor);
 
 const title = document.querySelector("#title");
+console.log(title.id);
 
 function changeText(){
   title.innerHTML="Say! Yaaah!!!";
@@ -19,6 +20,11 @@ function moreChange(){
 
 title.addEventListener("mouseenter",changeText);
 title.addEventListener("mouseleave",moreChange);
+
+const test = document.querySelector(".hello h1");
+console.log(test);
+const secondTest = document.querySelectorAll(".hello h1");
+console.log(secondTest);
 
 
 // const calculator = {
