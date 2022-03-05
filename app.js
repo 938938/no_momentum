@@ -3,6 +3,7 @@ const body = document.querySelector("body");
 
 function changeColor(){
   body.style.backgroundColor="orange";
+  document.title="change?";
 }
 
 btn.addEventListener("click",changeColor);
@@ -50,4 +51,8 @@ if(isNaN(age) || age < 0 ){
   console.log("I think you should exercise");
 } else if (age>80){
   console.log("You can do whatever you want.");
+};
+
+if((a &&b) || (c&&d)){
+  
 }
