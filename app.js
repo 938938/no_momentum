@@ -26,11 +26,24 @@
 const h1 = document.querySelector("#title");
 
 function handleTitle(){
-  if(h1.style.color==="blue"){
-    h1.style.color="tomato";
-  } else {
-    h1.style.color="blue";
-  }
+  // const currentColor = h1.style.color;
+  // let newColor;
+  // if(currentColor==="blue"){
+  //   newColor="tomato";
+  // } else {
+  //   newColor="blue";
+  // };
+  // h1.style.color = newColor;
+
+  // const clickClass = "active";
+  // if(h1.classList.contains(clickClass)){
+  //   h1.classList.remove(clickClass);
+  // } else {
+  //   h1.classList.add(clickClass);
+  // }
+
+  // const clickClass = "active";
+  h1.classList.toggle("active");
 }
 
 h1.addEventListener("click",handleTitle);
