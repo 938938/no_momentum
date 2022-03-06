@@ -1,49 +1,10 @@
-// const btn = document.querySelector("#btn");
-// // const body = document.querySelector("body");
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
 
-// function changeColor(){
-//   body.style.backgroundColor="orange";
-//   document.title="change?";
-// }
-
-// btn.addEventListener("click",changeColor);
-
-// const title = document.querySelector("#title");
-// console.log(title.id);
-
-// function changeText(){
-//   title.innerHTML="Say! Yaaah!!!";
-//   title.style.color="transparent";
-// }
-// function moreChange(){
-//   title.innerHTML="What happen?";
-//   title.style.color="black";
-// }
-
-// title.addEventListener("mouseenter",changeText);
-// title.addEventListener("mouseleave",moreChange);
-
-const h1 = document.querySelector("#title");
-
-function handleTitle(){
-  // const currentColor = h1.style.color;
-  // let newColor;
-  // if(currentColor==="blue"){
-  //   newColor="tomato";
-  // } else {
-  //   newColor="blue";
-  // };
-  // h1.style.color = newColor;
-
-  // const clickClass = "active";
-  // if(h1.classList.contains(clickClass)){
-  //   h1.classList.remove(clickClass);
-  // } else {
-  //   h1.classList.add(clickClass);
-  // }
-
-  // const clickClass = "active";
-  h1.classList.toggle("active");
+function onLogin(event){
+  event.preventDefault();
+  console.log(event);
+  // const userName = loginInput.value;
 }
 
-h1.addEventListener("click",handleTitle);
+loginForm.addEventListener("submit",onLogin);
