@@ -1,4 +1,4 @@
-const clokc = document.querySelector("h2#clock");
+const clock=document.querySelector(".clock_po");
 
 function getClock(){
   const date = new Date();
@@ -6,7 +6,7 @@ function getClock(){
   const min = String(date.getMinutes()).padStart(2,"0");
   const sec = String(date.getSeconds()).padStart(2,"0");
 
-  clokc.innerText = `${hours}:${min}:${sec}`
+  clock.innerText = `${hours}:${min}:${sec}`
 };
 
 getClock();

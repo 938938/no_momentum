@@ -1,54 +1,54 @@
-const toDoForm = document.getElementById("todo-form");
-const toDoInput = document.querySelector("#todo-form input");
-const toDoList = document.getElementById("todo-list");
+const todoForm = document.querySelector(".todo-form");
+const todoInput = todoForm.querySelector("input");
+const todoList = document.querySelector(".todo-list");
 
 const TODOS_KEY = "todos";
 
-let toDos = [];
+let toDos=[];
 
-function saveToDos() {
-  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+function saveTodos(){
+  localStorage.setItem(TODOS_KEY,JSON.stringify(toDos));
 }
 
-function deleteToDo(event) {
+function deleteTodo(event){
   const li = event.target.parentElement;
   li.remove();
-  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
-  saveToDos();
+  toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
+  saveTodos();
 }
 
-function paintToDo(newTodo) {
+function paintTodo(newTodo){
   const li = document.createElement("li");
-  li.id = newTodo.id;
-  const span = document.createElement("span");
+  li.id=newTodo.id;
+  const span =document.createElement("span");
   span.innerText = newTodo.text;
-  const btn = document.createElement("button");
-  btn.innerText = "X";
-  btn.addEventListener("click", deleteToDo);
-  li.appendChild(span); // span 태그를 li 안에 집어넣는 코드
-  li.appendChild(btn);
-  toDoList.appendChild(li);
+  const button = document.createElement("button");
+  button.innerText = "√";
+  button.addEventListener("click",deleteTodo);
+  li.appendChild(span);
+  li.appendChild(button);
+  todoList.appendChild(li);
 }
 
-function handleToDoSubmit(event) {
+function handleTodoSubmit(event){
   event.preventDefault();
-  const newTodo = toDoInput.value;
-  toDoInput.value = "";
+  const newTodo=todoInput.value;
+  todoInput.value="";
   const newTodoObj = {
-    text: newTodo,
-    id: Date.now(),
+    text:newTodo,
+    id:Date.now()
   };
   toDos.push(newTodoObj);
-  paintToDo(newTodoObj);
-  saveToDos();
+  paintTodo(newTodoObj);
+  saveTodos();
 }
 
-toDoForm.addEventListener("submit", handleToDoSubmit);
+todoForm.addEventListener("submit",handleTodoSubmit);
 
-const savedToDos = localStorage.getItem(TODOS_KEY);
+const savedTodos = localStorage.getItem(TODOS_KEY);
 
-if (savedToDos !== null) {
-  const parsedToDos = JSON.parse(savedToDos);
-  toDos = parsedToDos;
-  parsedToDos.forEach(paintToDo);
+if(savedTodos !== null){
+  const parsedTodos = JSON.parse(savedTodos);
+  toDos = parsedTodos;
+  parsedTodos.forEach(paintTodo);
 }
