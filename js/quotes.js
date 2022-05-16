@@ -39,12 +39,12 @@ const quotes = [
   quote: 'If you really want to do something, you will find a way. If you do not, you will find an excuse.',
   author: 'Jim Rohn'
   },
-  ];
+  ]; // 사용할 명언-작가를 오브젝트 형태로 저장
 
 const quote = document.querySelector(".quote span:first-child");
 const author = document.querySelector(".quote span:last-child");
 
-const todaysQuote = quotes[Math.floor(Math.random()*quotes.length)];
+const todaysQuote = quotes[Math.floor(Math.random()*quotes.length)]; // quotes배열에서 랜덤한 요소를 가져오기
 
-quote.innerText=todaysQuote.quote;
+quote.innerText=todaysQuote.quote; // quote 부분에는 quotes배열의 quote 부분 삽입
 author.innerText=todaysQuote.author;
