@@ -9,19 +9,23 @@
 </head>
 <body>
   <div id="section">
+    <!-- 로그인 파트 -->
     <div class="login">
       <form class="login_form hidden">
         <input required maxlength="15" type="text" placeholder="What is your name?">
-        <button>Log In</button>
+        <!-- required : 반드시 입력해야 함. maxlength : 15글자를 넘기지 못함 -->
+        <button>Log In</button> 
       </form>
       <h1 class="greeting hidden"></h1>
     </div>
+    <!-- 명언 파트 -->
     <div class="quote">
       <span></span><br>
       <span></span>
     </div>
     <div class="float clearFix">
       <div class="left">
+        <!-- 할 일 파트 -->
         <div class="todo">
           <form class="todo-form">
             <input type="text" placeholder="Write a To Do and Press Enter" required>
@@ -30,9 +34,11 @@
         </div>  
       </div>
       <div class="right">
+        <!-- 시계 파트 -->
         <div class="clock">
           <h2 class="clock_po"></h2>
         </div>
+        <!-- 날씨 파트 -->
         <div class="weather">
           <span></span><br>
           <span></span>
