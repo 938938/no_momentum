@@ -13,7 +13,7 @@ function onloginSubmit(event) { // 로그인 기능(input에 submit이 일어났
   paintGreetings(username); // 유저 네임 표시 함수 실행
 }
 
-function paintGreetings(username){ // 유저네임 표시 함수
+function paintGreetings(username){ // 유저네임 표시 함수(onloginSubmit 함수와 아래 if문에 두번 반복되므로 따로 설정)
   greeting.innerText = `Welcome to your universe, ${username} !`; // greeting부분에 인삿말 삽입
   greeting.classList.remove(HIDDEN_CLASSNAME); // greeting에 있는 hidden 클래스 제거
 }
